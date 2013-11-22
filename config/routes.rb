@@ -1,5 +1,7 @@
 Dealerapp::Application.routes.draw do
-  get "cars/new"
+  #get "cars/new"
+
+  resources :cars
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

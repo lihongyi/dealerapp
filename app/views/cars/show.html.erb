@@ -1,0 +1,19 @@
+<b><u><h1>DISPLAY CAR</h1></u></b><br />
+
+<h2><%= @car.make %> - <%= @car.model %></h2>
+
+<center>
+Year: <%= @car.year %> <br />
+Body Style: <%= @car.body %> <br />
+Color: <%= @car.color %> <br />
+
+<% if (@car.mileage.to_i >= 0) %>
+	Mileage: <%= @car.mileage %>
+<% else %>
+	<b><font color="green">New Car</font></b> 
+<% end %>
+<br />
+
+Price: <%= @car.price %> <br />
+
+</center>
