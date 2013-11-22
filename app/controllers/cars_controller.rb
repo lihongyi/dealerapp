@@ -17,7 +17,7 @@ class CarsController < ApplicationController
   end
 
   def index
-  	@car = Car.all
+  	@cars = Car.paginate(page: params[:page])
   end
 
   def show
@@ -25,12 +25,24 @@ class CarsController < ApplicationController
   end
 
   def edit
+  	@car = Car.find(params[:id])
   end
 
   def update
+  	@car = Car.find(params[:id])
+  	if @car.update_attributes(params[:car])
+      #@user.update_attribute(:member_type, params[:user][:member_type])
+  		flash[:success] = "Updated!"
+  		redirect_to @car
+  	else
+  		render 'edit'
+  	end
   end
 
   def destroy
+  	Car.find(params[:id]).destroy
+    flash[:success] = "Car removed!"
+    redirect_to cars_path
   end
 
 end

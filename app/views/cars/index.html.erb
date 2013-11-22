@@ -1,0 +1,19 @@
+<% provide(:title, 'cars') %>
+
+<div class="row">
+
+	<div class="span8">
+
+		<h1>All Cars</h1>
+
+		<%= will_paginate @cars %>
+
+		<ul class="cars">
+		  <%= render @cars %>
+		</ul>
+
+		<%= will_paginate @cars%>
+
+	</div>
+
+</div>

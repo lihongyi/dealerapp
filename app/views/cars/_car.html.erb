@@ -1,0 +1,21 @@
+<li>
+	<span class="content">
+  		<strong><%= link_to car.make + " - " + car.model, car %></strong> 
+  	</span>
+  	<span class="timestamp">
+  		Year: <%= car.year %> <br>
+  	</span>
+  	Color: <%= car.color %> | Body Style: <%= car.body %> | 
+
+<% if (car.mileage.to_i >= 0) %>
+  Mileage: <%= car.mileage %>
+<% else %>
+  <b><font color="green">New Car</font></b> 
+<% end %>
+
+     <br>
+
+  	<%= link_to "edit", edit_car_path(car) %> 
+  	| <%= link_to "delete", car, method: :delete, confirm: "Delete this car?" %>
+
+</li>

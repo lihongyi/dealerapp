@@ -1,0 +1,40 @@
+<% provide(:title, 'Add new car') %>
+
+<h1>Update car</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@car) do |f| %>
+
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :make %>
+      <%= f.text_field :make %> <br />
+
+      <%= f.label :model %>
+      <%= f.text_field :model %> <br />
+
+      <%= f.label :year %>
+      <%= f.text_field :year %> <br />
+
+<!--
+      <%= label_tag 'Signup Authorization Code' %>
+      <%= text_field_tag :authorization_code %>
+-->
+      <%= f.label :body %>
+      <%= f.text_field :body %> <br />
+
+      <%= f.label :price %>
+      <%= f.text_field :price %> <br />
+
+      <%= f.label :color %>
+      <%= f.text_field :color %> <br />
+
+      <br /> If new car, enter -1, else enter actual mileage.
+      <%= f.label :mileage %>
+      <%= f.text_field :mileage %> <br />
+
+      <%= f.submit "Update this car", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
