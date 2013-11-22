@@ -66,6 +66,6 @@ module Dealerapp
     config.assets.version = '1.0'
 
     # config/application.rb
-    config.assets.initialize_on_precompile = true
+    config.assets.initialize_on_precompile = false
   end
 end
