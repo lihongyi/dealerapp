@@ -1,0 +1,35 @@
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+.container {
+	text-align: center;
+}
+
+#buttons {
+	text-align: center;
+}
+
+h3 {
+	margin-left: 20px;
+}
+#testdrive {
+	margin: auto;
+	position: relative;
+	top: 0; left: 0; bottom: 0; right: 0;
+	height:80px;
+	margin-bottom: 50px;
+}
+
+#vin, #idfront, #idback, #vinscan{
+	width:100%; 
+	height:100px; 
+	margin-bottom:0px;
+	font-size:30px;
+}
+
+#retake, #drive {
+	font-size:30px;
+}
