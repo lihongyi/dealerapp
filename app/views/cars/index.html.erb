@@ -4,7 +4,7 @@
 
 	<div class="span8">
 
-		<h1>All Cars</h1>
+		<div class="dealernav"><h1>All Cars</h1></div>
 
 		<%= will_paginate @cars %>
 
@@ -13,6 +13,8 @@
 		</ul>
 
 		<%= will_paginate @cars%>
+
+		<%= button_to "New Car", new_car_path, class: "btn btn-large btn-primary", method: :get %>
 
 	</div>
 
